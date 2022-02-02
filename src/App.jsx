@@ -14,7 +14,7 @@ import "./index.css";
 const App = () => {
   return (
     <>
-      <div className="container">
+      <div className="container application">
         <div className="content">
           <div className="navbar">
             <div className="logo">
