@@ -7,11 +7,21 @@
 *:focus {
   outline: none;
 }
+.application{
+  overflow-x: hidden;
+}
+.slider-container {
+  display: inline-block;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #fff;
   color: #000;
+}
+.slick-slide img {
+  margin: auto;
+  width: 100%;
 }
 .container {
   width: 100%;
@@ -96,21 +106,20 @@ body {
 /* --------main---------- */
 
 .main {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ flex-direction: row;
 }
 .aside {
-  justify-self: left;
-  width: 100%;
+width: 50%;
 }
-.aside img {
-  width: 100%;
-} 
+
 .section {
   justify-self: left;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: left;
 }
@@ -460,9 +469,9 @@ body {
 /* --------------responsiv--appp-----------responsiv--appp-----------------------responsiv--appp----------------------responsiv--appp-------------------------responsiv--appp--------------------- */
 
 @media screen and (min-width: 2000px) {
-  .main {
+  /* .main {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
   .form {
     padding: 20px 10px;
   }
@@ -476,9 +485,14 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .main{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+   flex-direction: column;
   }
+  .aside{
+    width: 100%;
+  }
+.section {
+  width: 100%;
+}
   .aside img {
     border-bottom: 1px solid #e7ac07;
   }

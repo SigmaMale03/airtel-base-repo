@@ -7,9 +7,8 @@ import playstore from "./images/gplay.png";
 import applestore from "./images/applelogo.png";
 import sponcer1 from "./images/bsi-assurance-iso.png";
 import sponcer2 from "./images/norton-certificate.png";
-import { AutomaticCarousel } from "react-automatic-carousel";
-
 import "./index.css";
+import Carousel from "./Slider";
 
 const App = () => {
   return (
@@ -39,11 +38,10 @@ const App = () => {
           <div className="nav_heading">
               <p>Merchant Account</p>
             </div>
+            
           <div className="main">
             <div className="aside">
-              <div><img src={slide1}/></div>
-              {/* <div><img src={slide2}/></div>
-              <div><img src={slide3}/></div> */}
+            <Carousel />
             </div>
             <div className="section">
               <form className="form">
