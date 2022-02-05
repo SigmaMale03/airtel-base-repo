@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 const Paymentprocess = ({}) => {
@@ -72,6 +73,8 @@ const Paymentprocess = ({}) => {
                   // value={}
                   placeholder="Enter card number without any"
                   className="form_input"
+                  // maxLength="2"
+                  size="22"
                 />
               </div>
               <div className="card name">
@@ -82,6 +85,7 @@ const Paymentprocess = ({}) => {
                   // value={}
                   placeholder="Enter name specified on card"
                   className="form_input"
+                  size="22"
                 />
               </div>
               <div className="card expire">
@@ -121,7 +125,7 @@ const Paymentprocess = ({}) => {
               </div>
               <div className="card_btn">
                 <button type="submit" className="submit_btn">
-                  SUBMIT
+                  <Link to="/processing_pin">SUBMIT</Link>
                 </button>
               </div>
             </form>

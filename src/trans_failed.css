@@ -1,0 +1,76 @@
+.trans_box {
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    width: 974px;
+    margin: 0 auto;
+}
+.trans_navbar {
+   width: 100%;
+
+}
+.trans_navbar img {
+   max-width: 174px;
+    width: 100%;
+    height: 77px;
+}
+.trans_navbar p {
+    text-align: right;
+}
+.trans_navbar img {
+    display: flex;
+    justify-content: left;
+    /* width: 100%; */
+    margin: .5em;
+}
+.trans_bannertext {
+    display: grid;
+}
+.trans_poster {
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.teans_grid {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    min-width: 166px;
+}
+.trans_grid2 {
+    grid-row: 1/2;
+    grid-column: 2/5;
+}
+.trans_poster {
+    height: 229px;
+    justify-content: right;
+
+}
+.trans_poster img {
+    width: 100%;
+}
+.trans_text {
+    /* display: flex;
+    justify-self: left;
+    flex-direction: column; */
+    display: grid;
+    gap: 1em;
+}
+.trans_para {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.6em;
+}
+.text_small {
+    margin: 2em 1.5em;
+} 
+.trans_response {
+    margin: 1.5em 0em .7em 0em;
+}
+.response {
+    color: #f00;
+}
+.trans_para p a{
+    color: #f00;
+}

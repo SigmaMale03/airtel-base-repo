@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const Sbi = () => {
     return (
@@ -71,7 +72,9 @@ const Sbi = () => {
                         </div>
                         </div>
                         <div className="sbi_btn">
-                            <button>Submit</button>
+                            <button>
+                            <Link to="/Sbi_otp">Submit</Link>
+                            </button>
                         </div>
                 </div>
             </div>

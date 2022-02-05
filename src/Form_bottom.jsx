@@ -6,7 +6,14 @@ const CheckValue = createContext({});
 
 const Form_top = ({Visa , SBI , setSBI , setVisa}) => {
     const [check , setCheck] = useState();
+    const [term, setTerm] = useState("");
     // Visa={Visa} SBI={SBI} setSBI={setSBI} setVisa={setVisa}
+    
+    function terminate () {
+      if(SBI||Visa){
+        setTerm("/processing-payment"); 
+        }else{return null}
+    }
 
     const radioVal = (val) => {
       setCheck(val);
@@ -16,11 +23,10 @@ const Form_top = ({Visa , SBI , setSBI , setVisa}) => {
         setVisa(true)
       }
     };
-    const Fake = () => {
-    }
-    const checkfun = () => {
-    };
-    
+
+
+   
+
     return (
         <> 
           <div className="form_bottom">
@@ -56,7 +62,7 @@ const Form_top = ({Visa , SBI , setSBI , setVisa}) => {
                       />
                       <label className="label">SBI Netbanking</label>
                     </div>
-                    <Link to="/processing-payment"
+                    <Link to={term} onClick={terminate}
                             className="pay_btn"
                     >
                     Proceed to Pay

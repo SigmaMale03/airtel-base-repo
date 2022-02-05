@@ -11,9 +11,10 @@ const Fakepage = ({Visa , SBI}) => {
         navigate(`/payment`)
      }else if(SBI){
         navigate(`/payment-SBI`)
-     }   
+     }else {navigate("/")}
      }, 2000)
     },[])
+
 
     return (
         <>

@@ -113,6 +113,7 @@ body {
  }
  .aside {
  width: 50%;
+ background: #f6f6f6;
  }
  
  .section {
@@ -370,10 +371,6 @@ body {
   }
 } */
 @media screen and (max-width: 1000px) {
-  
-  .aside img {
-    border-bottom: 1px solid #e7ac07;
-  }
   .middle_bottom {
     grid-column: 1/4;
     grid-row: 2/3;
@@ -392,7 +389,7 @@ body {
     justify-content: flex-start;
   }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:850px) {
   .section{
     width: 100%;
   }
@@ -424,6 +421,9 @@ body {
   }
   .form_bottom .label {
     margin: 20px 0px 0px;
+  }
+  .section {
+    border-top: 1px solid #f5de9f;
   }
   .section_grid {
     grid-template-columns: 1fr;
@@ -512,7 +512,6 @@ body {
   width: 530px;
   padding: 0em .5em;
   font-family: 'Times New Roman', Times, serif;
-  font-size: small;
   border: 1px solid #cacaca;
   margin-top: .7em; 
 }
@@ -562,7 +561,13 @@ body {
 .sbi_btn button {
   padding: 1px 6px;
 }
-
+.sbi_btn button a {
+  text-decoration: none;
+  color: #000;
+}
+sbi_detail p {
+  margin: .5em 0em;
+}
 /* ----------------/---/-/-/--/-//-/-/--/-/---------------------------------------------------------------------------------- */
 
 .wraper {
@@ -659,12 +664,23 @@ body {
   justify-self: center;
 }
 .submit_btn {
-  padding: 5px 15px;
+  padding: 3px 7px;
   border: none;
-  background: #5e5e5e;
-  color: #ffefd5;
+  background: #708090;;
   margin: 1em 0em 0em 3em;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
 }
+.submit_btn:active {
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+  border-bottom: none;
+  border-right: none;
+}
+.submit_btn a {
+  text-decoration: none;
+  color: #ffefd5;
+} 
 .card_footer {
   display: flex;
   justify-content: center;
