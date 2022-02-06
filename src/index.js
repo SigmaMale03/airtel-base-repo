@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App2 from "./App2";
-// import Visa from './Visa';
+import App from "./App";
 
 ReactDOM.render(
   <>
-    <App2 />
+    <App />
   </>,
   document.getElementById("root")
 );

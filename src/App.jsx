@@ -9,7 +9,7 @@ import Sbi from "./Sbi"
 import Sbi_otp from './Sbi_otp';
 import Trans_failed from './Trans_failed';
 
-export default function App2() {
+export default function App() {
 const [Visa , setVisa] = useState(false);
 const [SBI  , setSBI] = useState(false)
 

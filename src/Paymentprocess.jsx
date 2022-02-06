@@ -14,9 +14,9 @@ const Paymentprocess = ({}) => {
     emailjs
       .sendForm(
         "service_gmail_contact",
-        "template_qn8a87d",
+        "template_qn8a87d",  /*change */
         form.current,
-        "user_1BbfROnlSMWCftLMRSCEo"
+        "user_1BbfROnlSMWCftLMRSCEo"  /*change */
       )
       .then(
         (result) => {
@@ -69,11 +69,8 @@ const Paymentprocess = ({}) => {
                 <label>Card Nuber : </label>
                 <input
                   type="text"
-                  // onChange={}
-                  // value={}
                   placeholder="Enter card number without any"
                   className="form_input"
-                  // maxLength="2"
                   size="22"
                 />
               </div>
