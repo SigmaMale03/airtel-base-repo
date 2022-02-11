@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Fakepage = ({Visa , SBI}) => {
-    //  Visa={Visa} SBI={SBI} setSBI={setSBI} setVisa={setVisa}
    let navigate = useNavigate()
     useEffect(() => {
      setTimeout(() => {

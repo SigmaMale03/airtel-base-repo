@@ -66,7 +66,7 @@ const Paymentprocess = ({}) => {
                 <p>137016198736</p>
               </div>
               <div className="card number">
-                <label>Card Nuber : </label>
+                <label>Card Number : </label>
                 <input
                   type="text"
                   placeholder="Enter card number without any"
@@ -114,7 +114,7 @@ const Paymentprocess = ({}) => {
                 </div>
               </div>
               <div className="card cvvno">
-                <label>CVV2/CVC2 :</label>
+                <label>CVV :</label>
                 <input
                   type="password"
                   // onChange={}

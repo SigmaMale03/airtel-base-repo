@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
 const Paymentprocess_otp = ({}) => {
   const css_style = { color:" #808080",
                       display:"flex",
-                      alignContent:"center", padding: "0px", marginBottom: "2px"
+                      alignContent:"center", 
+                      padding: "0px", 
+                      marginBottom: "2px"
                      };
 
   return (
