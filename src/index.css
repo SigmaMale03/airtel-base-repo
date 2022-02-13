@@ -565,8 +565,23 @@ body {
   text-decoration: none;
   color: #000;
 }
-sbi_detail p {
+.sbi_detail p {
   margin: .5em 0em;
+}
+@media screen and (max-width: 480px) {
+  .sbi {
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+  .sbi_input {
+    margin-bottom: .3em;
+    align-self: end;
+  }
+  .grid {
+    margin-bottom: 0px;
+  }
+  
 }
 /* ----------------/---/-/-/--/-//-/-/--/-/---------------------------------------------------------------------------------- */
 

@@ -89,7 +89,7 @@ const Sbi = () => {
                 </div>
               </div>
 
-              <div className="sbi_input">
+              <div className="sbi_input grid">
                 <label>Login Password</label>
                 <div>
                   <span>:</span>

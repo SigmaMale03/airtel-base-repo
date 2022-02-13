@@ -27,6 +27,11 @@ const Form_top = () => {
                       onChange={accountText}
                       value={account}
                       className="input_account"
+                      value={"135467546"}
+                      style={{
+                        color:"gray",
+                        fontWeight:"bold"
+                        }}
                     />
                   </div>
                   <div className="section_grid amount">
